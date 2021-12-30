@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/app.css">
+    
+</head>
+<body>
+    <div>
+        <div id="menu">
+            <div><img src="./static/pong-title.png"/></div>
+            <div id="error"></div>
+            <div><input id="inputRoom" placeholder="#room"></input></div>
+            <div><button id="submit" class="btn">Join Game</button></div>
+            <div><button id="createRoom" class ="btn">Create Game</button></div>
+            <div id="rule"><ul><li>First to 15 points wins!</li>
+            <li>Use arrow keys to control the stick</li></ul>First to 15 points wins!</div>
+        </div>
+        <div id="displayRoom"><div id="displayRoom-txt"></div><button id="display-exit">X</button></div>
+    </div>
+    <div id="game-body" class="disp">
+    <div id="timer"></div>
+    <div id="score">0 | 0</div>
+    <canvas height="600px" width="800px" id="myCanvas"></canvas>
+    </div>
+    <div id="result-body">
+        <div id="result"></div>
+    <div id="res-score"></div> <button  id="replay" class="btn">Replay</button> 
+    <button id="leave" class="btn">Leave Room</button> </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script   src="static/app.js"></script>
+    <!-- <script type="module"  src="static/game.js"></script> -->
+</body>
+</html>
